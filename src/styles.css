@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'TF2';
+  src: url('./fonts/TF2Build.woff2') format('woff2'),
+    url('./fonts/TF2Build.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* project properties */
+:root {
+    --dark-bg-color: #393431;
+    --tab-button-bg-color: #776b5f;
+    --tab-button-color: #e8e1c7;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 1fr 7fr;
+
+    font-family: "TF2", sans-serif;
+    height: 100vh;
+}
+
+header {
+    background-color: var(--dark-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    nav {
+        display: flex;
+        gap: 1rem;
+
+        button {
+            background-color: var(--tab-button-bg-color);
+            color: var(--tab-button-color);
+            
+            border: none;
+            
+            font-size: 2rem;
+            
+            height: 4rem;
+            width: 12rem;
+        }
+    }
+}
