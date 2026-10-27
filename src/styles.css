@@ -29,6 +29,7 @@ input, button, textarea, select {
     --darker-bg-color: #2b2724;
     --tab-button-bg-color: #776b5f;
     --tab-button-color: #e8e1c7;
+    --unique-item-color: #ffd700; 
 }
 
 body {
@@ -132,5 +133,43 @@ main {
                 content: "- ";
             }
         }
+    }
+}
+
+/* menu page */
+.menu {
+    display: grid;
+    grid-template-rows: auto 300px auto 300px;
+    align-items: center;
+
+    h1 {
+        background-color: var(--darker-bg-color);
+        
+        font-size: 2rem;
+
+        padding: 1rem 1.5rem;
+    }
+
+    .main-dishes, .beverages {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 4rem;
+        height: 80%;
+
+        .menu-item {
+            background-color: var(--dark-bg-color);
+            border: 4px solid var(--unique-item-color);
+            border-radius: 1rem;
+            display: grid;
+            grid-template-rows: 200px 1fr;
+            justify-items: center;
+            align-items: center;
+            
+            img {
+                height: 80%;
+            }
+        }
+
     }
 }
