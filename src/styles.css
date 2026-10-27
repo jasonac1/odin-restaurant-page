@@ -170,6 +170,23 @@ main {
                 height: 80%;
             }
         }
+    }
+}
 
+.contact {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    img {
+        background-color: var(--tab-button-color);
+    }
+
+    .phone {
+        background-color: var(--darker-bg-color);
+        border: 8px solid var(--unique-item-color);
+        border-radius: 1rem;
+        font-size: 8rem;
+        padding: 2rem;
     }
 }
