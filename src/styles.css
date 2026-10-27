@@ -26,6 +26,7 @@ input, button, textarea, select {
 /* project properties */
 :root {
     --dark-bg-color: #393431;
+    --darker-bg-color: #2b2724;
     --tab-button-bg-color: #776b5f;
     --tab-button-color: #e8e1c7;
 }
@@ -58,6 +59,78 @@ header {
             
             height: 4rem;
             width: 12rem;
+        }
+    }
+}
+
+main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/dustbowl.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--darker-bg-color);
+    color: #e8e1c7;
+    padding: 4rem 16rem;
+    
+    > * {
+        height: 100%;
+    }
+}
+
+/* home page */
+.home {
+    display: grid;
+    gap: 2rem;
+
+    .hero {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr 1fr;
+
+        .hero-text {
+            background-color: var(--dark-bg-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h1 {
+                font-size: 4rem;
+            }
+        }
+
+        .hero-img {
+            background-color: var(--darker-bg-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .reviews {
+        background-color: #2b2724;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        .quote {
+            font-size: 2rem;
+
+            &::before, &::after {
+                content: "\"";
+            }
+        }
+
+        .author {
+            &::before {
+                content: "- ";
+            }
         }
     }
 }
