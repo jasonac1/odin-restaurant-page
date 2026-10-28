@@ -13,12 +13,26 @@ const displayController = (() => {
         if (tab === "contact") displayContactTab();
     }
     
-    const homeTabButton = document.querySelector("#home");
-    homeTabButton.addEventListener("click", () => displayTab("home"));
-    const menuTabButton = document.querySelector("#menu");
-    menuTabButton.addEventListener("click", () => displayTab("menu"));
-    const contactTabButton = document.querySelector("#contact");
-    contactTabButton.addEventListener("click", () => displayTab("contact"));
+    function highlightTab(tab) {
+        homeTabButton.classList.remove("current");
+        menuTabButton.classList.remove("current");
+        contactTabButton.classList.remove("current");
 
+        document.querySelector(`#${tab}`).classList.add("current");
+    }
+
+    const homeTabButton = document.querySelector("#home");
+    const menuTabButton = document.querySelector("#menu");
+    const contactTabButton = document.querySelector("#contact"); 
+    
+    homeTabButton.addEventListener("click", () => displayTab("home"));
+    menuTabButton.addEventListener("click", () => displayTab("menu"));
+    contactTabButton.addEventListener("click", () => displayTab("contact"));
+    
+    homeTabButton.addEventListener("click", () => highlightTab("home"));
+    menuTabButton.addEventListener("click", () => highlightTab("menu"));
+    contactTabButton.addEventListener("click", () => highlightTab("contact"))
+
+    displayTab("home");
 
 })();

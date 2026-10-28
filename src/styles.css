@@ -190,3 +190,7 @@ main {
         padding: 2rem;
     }
 }
+
+.current {
+    border: 4px solid var(--tab-button-color);
+}
